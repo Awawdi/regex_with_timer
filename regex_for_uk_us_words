@@ -1,0 +1,6 @@
+import re
+string_to_search = '\n'.join([input() for _ in range(int(input()))])
+for _ in range(int(input())):
+    british_word = input()
+    american_word = british_word.replace("our", "or")
+    print(len(re.findall(f'\\b({american_word}|{british_word})\\b', string_to_search)))
